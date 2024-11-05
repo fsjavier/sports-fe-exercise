@@ -1,3 +1,12 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Calendar from "./pages/Calendar";
+
 export default function App() {
-  return <h1 className="text-2xl font-bold">Sportradar Code Challenge</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Calendar />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
