@@ -1,4 +1,4 @@
-import { formatDate } from "./Calendar";
+import { formatDate } from "../../utils/DateHelper";
 
 type CalendarDayProps = {
   day: Date;

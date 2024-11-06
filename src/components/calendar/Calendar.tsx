@@ -1,14 +1,5 @@
-import { eachDayOfInterval, endOfMonth, startOfMonth, format } from "date-fns";
+import { getMonthDays, formatDate } from "../../utils/DateHelper";
 import CalendarDay from "./CalendarDay";
-
-function getMonthDays(date: Date) {
-  const monthStart = startOfMonth(date);
-  const monthEnd = endOfMonth(date);
-  return eachDayOfInterval({ start: monthStart, end: monthEnd });
-}
-
-export const formatDate = (date: Date, formatString: string) =>
-  format(date, formatString);
 
 export default function Calendar() {
   const currentDate = new Date();
