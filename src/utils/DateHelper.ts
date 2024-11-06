@@ -8,6 +8,7 @@ import {
   endOfWeek,
   addMonths,
   subMonths,
+  isToday,
 } from "date-fns";
 
 export const getCalendarDays = (date: Date): Date[] => {
@@ -37,4 +38,8 @@ export const getPreviousMonth = (date: Date): Date => {
 
 export const formatDate = (date: Date, formatString: string): string => {
   return format(date, formatString);
+};
+
+export const isTodayDate = (date: Date): boolean => {
+  return isToday(date);
 };
