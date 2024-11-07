@@ -1,17 +1,10 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { getMonthYear } from "../../utils/DateHelper";
+import { getMonthYear } from "../../utils/dateHelper";
+import { useCalendar } from "../../context/CalendarContext";
 
-interface CalendarHeaderProps {
-  handlePreviousMonth: () => void;
-  handleNextMonth: () => void;
-  currentDate: Date;
-}
+export default function CalendarHeader() {
+  const { handlePreviousMonth, handleNextMonth, currentDate } = useCalendar();
 
-export default function CalendarHeader({
-  handlePreviousMonth,
-  handleNextMonth,
-  currentDate,
-}: CalendarHeaderProps) {
   return (
     <>
       <div className="flex justify-between items-center mb-4">

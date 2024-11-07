@@ -1,4 +1,4 @@
-import { formatDate, isTodayDate } from "../../utils/DateHelper";
+import { formatDate, isTodayDate } from "../../utils/dateHelper";
 
 type CalendarDayProps = {
   day: Date;

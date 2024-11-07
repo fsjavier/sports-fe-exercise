@@ -1,22 +1,16 @@
-import { SportEvent } from "../../types";
 import { formatDate, isCurrentMonth } from "../../utils/dateHelper";
 import CalendarDay from "./CalendarDay";
+import { useCalendar } from "../../context/CalendarContext";
 
-interface CalendarGridProps {
-  calendarDays: Date[];
-  selectedDate: Date;
-  currentDate: Date;
-  handleSelectDate: (date: Date) => void;
-  getEventsForDate: (date: Date) => SportEvent[];
-}
+export default function CalendarGrid() {
+  const {
+    calendarDays,
+    selectedDate,
+    currentDate,
+    handleSelectDate,
+    getEventsForDate,
+  } = useCalendar();
 
-export default function CalendarGrid({
-  calendarDays,
-  selectedDate,
-  currentDate,
-  handleSelectDate,
-  getEventsForDate,
-}: CalendarGridProps) {
   return (
     <div className="grid grid-cols-7 gap-2">
       {calendarDays.map((day) => {
