@@ -18,6 +18,9 @@ export interface Team {
   name: string;
   officialName: string;
   slug: string;
+  abbreviation: string;
+  teamCountryCode: string;
+  stagePosition: number | null;
 }
 
 export interface Stage {
@@ -29,10 +32,12 @@ export interface Stage {
 export interface Result {
   homeGoals: number;
   awayGoals: number;
-  winner: string;
+  winner: string | null;
+  winnerId: string | null;
   message: string | null;
   goals: string[];
   yellowCards: string[];
   secondYellowCards: string[];
   directRedCards: string[];
+  scoreByPeriods: string[] | null;
 }
