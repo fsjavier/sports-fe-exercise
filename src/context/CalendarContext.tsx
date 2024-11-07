@@ -26,7 +26,11 @@ const CalendarContext = createContext<CalendarContextType | undefined>(
   undefined
 );
 
-export function CalendarProvider({ children }: { children: ReactNode }) {
+interface CalendarProviderProps {
+  children: ReactNode;
+}
+
+export function CalendarProvider({ children }: CalendarProviderProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   const { data: sportEvents, isLoading, isError, error } = useSportEvents();
