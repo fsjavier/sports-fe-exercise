@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import Calendar from "./pages/HomePage";
 import Layout from "./components/layout/Layout";
+import HomePage from "./pages/HomePage";
+import EventDetailPage from "./pages/SportEventDetailPage";
 
 const queryClient = new QueryClient();
 
@@ -11,7 +12,8 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-            <Route path="/" element={<Calendar />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/event/:id" element={<EventDetailPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
