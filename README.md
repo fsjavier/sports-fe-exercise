@@ -27,3 +27,18 @@ npm run dev
 - React
 - Tailwind CSS
 - Typescript
+- React Router
+- React Query
+- date-fns
+- json-server
+- React Lucide
+
+## Decissions made during development
+
+- I used a json-server to mock the API. The goal was to simulate a real API.
+- I used React Query to fetch the data from the json-server.
+- I used React Router to navigate between the pages.
+- I used Tailwind CSS for the styling.
+- I used the date-fns library to handle the dates and create date helper functions.
+- I refactored the calendar logic to use a context to avoid prop drilling and have cleaner components.
+- I used helper functions to check if the event has the required data to be displayed in the EventDetailPage.
