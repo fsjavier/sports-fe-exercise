@@ -2,12 +2,15 @@ import SportEventsList from "../sportEvents/SportEventsList";
 import CalendarHeader from "./CalendarHeader";
 import CalendarGrid from "./CalendarGrid";
 import { useCalendar } from "../../context/CalendarContext";
+import LoadingMessage from "../ui/LoadingMessage";
+import ErrorMessage from "../ui/ErrorMessage";
 
 export default function Calendar() {
   const { isLoading, isError, error } = useCalendar();
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError && error) return <div>Error: {error.message}</div>;
+  if (isLoading) return <LoadingMessage />;
+  if (isError && error)
+    return <ErrorMessage header="Error" message={error.message} />;
 
   return (
     <div className="container mx-auto p-4">
