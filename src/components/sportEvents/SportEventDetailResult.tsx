@@ -1,11 +1,11 @@
 interface Result {
   homeGoals: number;
   awayGoals: number;
-  winner: string | null;
+  winner?: string | null;
 }
 
 interface EventResultProps {
-  result: Result | null;
+  result?: Result;
 }
 
 export default function SportEventDetailResult({ result }: EventResultProps) {

@@ -1,4 +1,4 @@
-import GoBack from "../ui/GoBack";
+import GoBackToCalendar from "../ui/GoBackToCalendar";
 
 interface SportEventDetailHeaderProps {
   homeTeam: string;
@@ -11,16 +11,14 @@ export default function SportEventDetailHeader({
   awayTeam,
   competitionName,
 }: SportEventDetailHeaderProps) {
-  const validatedCompetitionName = competitionName || "N/A";
-
   return (
     <>
-      <GoBack title="Calendar" />
+      <GoBackToCalendar />
       <div className="bg-blue-500 text-white p-4 rounded-t-lg">
         <h2 className="text-2xl font-bold mb-2">
           {homeTeam} vs {awayTeam}
         </h2>
-        <p className="text-sm">{validatedCompetitionName}</p>
+        <p className="text-sm">{competitionName}</p>
       </div>
     </>
   );

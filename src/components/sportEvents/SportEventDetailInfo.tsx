@@ -6,8 +6,8 @@ import { capitalizeFirstLetterOfEachWord } from "../../utils/textHelper";
 interface SportEventDetailInfoProps {
   date: string;
   time: string;
-  stage: string;
-  stadium: string;
+  stage?: string;
+  stadium?: string | null;
 }
 
 export default function SportEventDetailInfo({
@@ -18,8 +18,10 @@ export default function SportEventDetailInfo({
 }: SportEventDetailInfoProps) {
   const formattedDate = formatDate(new Date(date), "MMMM d, yyyy");
   const validatedTime = time || "N/A";
-  const validatedStage = capitalizeFirstLetterOfEachWord(stage);
-  const validatedStadium = capitalizeFirstLetterOfEachWord(stadium);
+  const validatedStage = stage ? capitalizeFirstLetterOfEachWord(stage) : "N/A";
+  const validatedStadium = stadium
+    ? capitalizeFirstLetterOfEachWord(stadium)
+    : "N/A";
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

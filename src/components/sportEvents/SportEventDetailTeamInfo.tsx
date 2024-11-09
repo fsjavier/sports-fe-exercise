@@ -4,7 +4,7 @@ import { capitalizeFirstLetterOfEachWord } from "../../utils/textHelper";
 
 interface Team {
   officialName: string;
-  teamCountryCode: string;
+  teamCountryCode?: string;
 }
 
 interface TeamInfoProps {
