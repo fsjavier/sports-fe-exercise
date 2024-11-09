@@ -18,13 +18,8 @@ export interface SportEvent {
 export enum EventSport {
   Football = "football",
   Basketball = "basketball",
-  Tennis = "tennis",
   Hockey = "hockey",
-  Baseball = "baseball",
-  Volleyball = "volleyball",
   Rugby = "rugby",
-  Golf = "golf",
-  Boxing = "boxing",
   AmericanFootball = "american-football",
   Other = "other",
 }
@@ -53,7 +48,7 @@ export interface Stage {
 export interface Result {
   homeGoals: number;
   awayGoals: number;
-  winner: string | null;
+  winner?: string | null;
   winnerId?: string | null;
   message?: string | null;
   goals?: string[] | null;
