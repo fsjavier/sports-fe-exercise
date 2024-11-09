@@ -1,26 +1,47 @@
 export interface SportEvent {
+  sport?: EventSport;
   season: number;
-  status: string;
+  status: EventStatus;
   timeVenueUTC: string;
   dateVenue: string;
-  stadium: string | null;
+  stadium?: string | null;
   homeTeam: Team;
   awayTeam: Team;
-  result: Result;
-  stage: Stage;
-  group: string | null;
+  result?: Result;
+  stage?: Stage;
+  group?: string | null;
   originCompetitionId: string;
   originCompetitionName: string;
   id: string;
+}
+
+export enum EventSport {
+  Football = "football",
+  Basketball = "basketball",
+  Tennis = "tennis",
+  Hockey = "hockey",
+  Baseball = "baseball",
+  Volleyball = "volleyball",
+  Rugby = "rugby",
+  Golf = "golf",
+  Boxing = "boxing",
+  AmericanFootball = "american-football",
+  Other = "other",
+}
+
+export enum EventStatus {
+  Cancelled = "cancelled",
+  Played = "played",
+  Scheduled = "scheduled",
 }
 
 export interface Team {
   name: string;
   officialName: string;
   slug: string;
-  abbreviation: string;
-  teamCountryCode: string;
-  stagePosition: number | null;
+  abbreviation?: string;
+  teamCountryCode?: string;
+  stagePosition?: number | null;
 }
 
 export interface Stage {
@@ -33,11 +54,11 @@ export interface Result {
   homeGoals: number;
   awayGoals: number;
   winner: string | null;
-  winnerId: string | null;
-  message: string | null;
-  goals: string[];
-  yellowCards: string[];
-  secondYellowCards: string[];
-  directRedCards: string[];
-  scoreByPeriods: string[] | null;
+  winnerId?: string | null;
+  message?: string | null;
+  goals?: string[] | null;
+  yellowCards?: string[] | null;
+  secondYellowCards?: string[] | null;
+  directRedCards?: string[] | null;
+  scoreByPeriods?: string[] | null;
 }
