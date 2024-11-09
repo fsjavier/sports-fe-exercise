@@ -6,7 +6,7 @@ import {
   getPreviousMonth,
   formatDate,
 } from "../utils/dateHelper";
-import useSportEvents from "../hooks/useSportEvents";
+import { useSportEvents } from "../hooks/useSportEvents";
 
 interface CalendarContextType {
   currentDate: Date;

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { SportEvent } from "../types";
 import { validatedDetailSportEvent } from "../utils/sportDataCheckHelper";
 import { capitalizeFirstLetter } from "../utils/textHelper";
-import useSportEvents from "../hooks/useSportEvents";
+import { useSportEvents } from "../hooks/useSportEvents";
 import AlertMessage from "../components/ui/AlertMessage";
 import GoBack from "../components/ui/GoBack";
 import ErrorMessage from "../components/ui/ErrorMessage";
