@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Layout from "./components/layout/Layout";
 import HomePage from "./pages/HomePage";
 import EventDetailPage from "./pages/SportEventDetailPage";
+import AddSportEventPage from "./pages/AddSportEventPage";
 
 const queryClient = new QueryClient();
 
@@ -14,6 +15,7 @@ export default function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/event/:id" element={<EventDetailPage />} />
+            <Route path="/add-event" element={<AddSportEventPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
