@@ -13,7 +13,7 @@ export default function Calendar() {
     return <ErrorMessage header="Error" message={error.message} />;
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto sm:p-4">
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="w-full lg:w-2/3">
           <div className="shadow-md rounded-lg p-4">

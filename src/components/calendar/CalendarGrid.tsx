@@ -12,7 +12,7 @@ export default function CalendarGrid() {
   } = useCalendar();
 
   return (
-    <div className="grid grid-cols-7 gap-2">
+    <div className="grid grid-cols-7 shadow-md">
       {calendarDays.map((day) => {
         const dayEvents = getEventsForDate(day);
         const eventCount = dayEvents.length;
