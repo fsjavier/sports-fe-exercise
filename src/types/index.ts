@@ -16,6 +16,7 @@ export interface SportEvent {
 }
 
 export enum EventSport {
+  All = "all",
   Football = "football",
   Basketball = "basketball",
   Hockey = "hockey",
@@ -25,6 +26,7 @@ export enum EventSport {
 }
 
 export enum EventStatus {
+  All = "all",
   Cancelled = "cancelled",
   Played = "played",
   Scheduled = "scheduled",
