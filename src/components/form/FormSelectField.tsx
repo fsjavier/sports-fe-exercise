@@ -42,11 +42,14 @@ export default function FormSelectField({
         <option value="" disabled>
           Select {label}
         </option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
+        {options.map(
+          (option) =>
+            option.value !== "all" && (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            )
+        )}
       </select>
     </div>
   );
