@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
-import { SportEvent } from "../types";
+import { EventSport, EventStatus, SportEvent } from "../types";
 import {
   getCalendarDays,
   getNextMonth,
@@ -20,6 +20,10 @@ interface CalendarContextType {
   handleNextMonth: () => void;
   handleSelectDate: (date: Date) => void;
   getEventsForDate: (date: Date) => SportEvent[];
+  statusFilter: EventStatus;
+  sportFilter: EventSport;
+  setStatusFilter: (status: EventStatus) => void;
+  setSportFilter: (sport: EventSport) => void;
 }
 
 const CalendarContext = createContext<CalendarContextType | undefined>(
@@ -33,6 +37,8 @@ interface CalendarProviderProps {
 export function CalendarProvider({ children }: CalendarProviderProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [statusFilter, setStatusFilter] = useState(EventStatus.All);
+  const [sportFilter, setSportFilter] = useState(EventSport.All);
   const { data: sportEvents, isLoading, isError, error } = useSportEvents();
 
   const calendarDays = getCalendarDays(currentDate);
@@ -43,7 +49,21 @@ export function CalendarProvider({ children }: CalendarProviderProps) {
   const handleSelectDate = (date: Date) => setSelectedDate(date);
 
   const getEventsForDate = (date: Date) => {
-    return sportEvents?.filter(
+    let filteredEvents = sportEvents;
+
+    if (statusFilter !== EventStatus.All) {
+      filteredEvents = filteredEvents.filter(
+        (event: SportEvent) => event.status === statusFilter
+      );
+    }
+
+    if (sportFilter !== EventSport.All) {
+      filteredEvents = filteredEvents.filter(
+        (event: SportEvent) => event.sport === sportFilter
+      );
+    }
+
+    return filteredEvents?.filter(
       (event: SportEvent) => event.dateVenue === formatDate(date, "yyyy-MM-dd")
     );
   };
@@ -62,6 +82,10 @@ export function CalendarProvider({ children }: CalendarProviderProps) {
         handleNextMonth,
         handleSelectDate,
         getEventsForDate,
+        statusFilter,
+        sportFilter,
+        setStatusFilter,
+        setSportFilter,
       }}
     >
       {children}
