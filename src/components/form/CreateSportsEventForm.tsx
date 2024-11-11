@@ -83,6 +83,10 @@ export default function CreateSportsEventForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <div className="text-sm text-muted-900 mb-4">
+        Fields marked with <span className="text-accent-900">*</span> are
+        required.
+      </div>
       <FormSelectField
         id="sport"
         name="sport"

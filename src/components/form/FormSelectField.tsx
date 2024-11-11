@@ -29,7 +29,7 @@ export default function FormSelectField({
   return (
     <div>
       <label htmlFor={id} className="block text-sm font-medium text-muted-900">
-        {label}
+        {label} {required && <span className="text-accent-900 ml-1">*</span>}
       </label>
       <select
         id={id}
