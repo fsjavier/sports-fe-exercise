@@ -66,7 +66,20 @@ export default function CreateSportsEventForm() {
 
     addEvent(sportEvent);
   };
-  const isFormComplete = Object.values(formData).every((value) => value !== "");
+  // Score fields are not required
+  function isFormComplete() {
+    const requiredFields: (keyof typeof formData)[] = [
+      "sport",
+      "status",
+      "timeVenueUTC",
+      "dateVenue",
+      "homeTeamName",
+      "awayTeamName",
+      "originCompetitionName",
+    ];
+
+    return requiredFields.every((field) => formData[field].trim() !== "");
+  }
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -162,7 +175,7 @@ export default function CreateSportsEventForm() {
       <div className="flex justify-center mt-10">
         <button
           type="submit"
-          disabled={!isFormComplete || isPending}
+          disabled={!isFormComplete() || isPending}
           className="w-full py-2 px-4 border rounded-md text-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-offset-1 focus:ring-1 focus:ring-indigo-500 disabled:bg-indigo-300 disabled:cursor-not-allowed"
         >
           {isPending ? "Adding..." : "Add Event"}
