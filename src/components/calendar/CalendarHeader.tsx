@@ -26,6 +26,7 @@ export default function CalendarHeader() {
         <button
           onClick={handlePreviousMonth}
           className="p-2 hover:bg-primary-50 rounded"
+          aria-label="Previous month"
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
@@ -33,6 +34,7 @@ export default function CalendarHeader() {
         <button
           onClick={handleNextMonth}
           className="p-2 hover:bg-primary-50 rounded"
+          aria-label="Next month"
         >
           <ChevronRight className="h-6 w-6" />
         </button>
