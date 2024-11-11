@@ -14,7 +14,7 @@ services:
     command: npm run dev
 
   json-server:
-    image: node:18
+    image: node:20-alpine
     container_name: cal_json_server_dev
     volumes:
       - .:/data
