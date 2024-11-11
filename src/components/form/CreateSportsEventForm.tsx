@@ -22,7 +22,7 @@ export default function CreateSportsEventForm() {
     originCompetitionName: "",
   });
 
-  const { mutate: addEvent, isPending, isError } = useCreateSportEvent();
+  const { mutate: addEvent, isPending, isError, error } = useCreateSportEvent();
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -172,7 +172,7 @@ export default function CreateSportsEventForm() {
         onChange={handleChange}
         required
       />
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center flex-col mt-10">
         <button
           type="submit"
           disabled={!isFormComplete() || isPending}
@@ -180,12 +180,14 @@ export default function CreateSportsEventForm() {
         >
           {isPending ? "Adding..." : "Add Event"}
         </button>
-        {isError && (
-          <ErrorMessage
-            header="Error adding event"
-            message="Please try again"
-          />
-        )}
+        <div className="mt-8">
+          {isError && (
+            <ErrorMessage
+              header="Error adding event"
+              message={`${error}. Please try again later`}
+            />
+          )}
+        </div>
       </div>
     </form>
   );
