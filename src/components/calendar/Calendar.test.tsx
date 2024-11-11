@@ -67,6 +67,5 @@ describe("Calendar Component", () => {
 
     expect(screen.getByText(nextMonth)).toBeInTheDocument();
     expect(screen.queryByText(initialMonth)).not.toBeInTheDocument();
-    screen.debug();
   });
 });
