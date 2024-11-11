@@ -60,6 +60,7 @@ docker compose up
 - Used helper functions to check if the event has the required data to be displayed in the EventDetailPage.
 - Added predifined options for the possible types of sport. I decided on the ones I added (football, basketball, hockey, rugby, american-football) to keep it simple based on the current data structure, where the result object contains fields for home and away goals. In the form I've generalized to score to add flexibility for other sports different than football.
 - Used vitest and react-testing-library to write tests.
+- Chose the palette of colors based on tones of blue, purple and red with a yellow for warnings. The colors are defined in the tailwind.config.ts file and used in the components as classes. To pick the colors I used [Paletton](https://paletton.com/).
 
 ## Testing
 
