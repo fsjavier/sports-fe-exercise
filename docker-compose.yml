@@ -19,6 +19,6 @@ services:
     volumes:
       - .:/data
     working_dir: /data
-    command: sh -c "npm run clean-json && npx json-server db.json"
+    command: sh -c "npx json-server sportData.json"
     ports:
       - "3000:3000"
