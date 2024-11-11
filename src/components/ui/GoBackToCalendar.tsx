@@ -5,7 +5,7 @@ export default function GoBackToCalendar() {
   return (
     <Link
       to="/"
-      className="inline-flex items-center text-primary-500 hover:text-primary-900 mb-4"
+      className="inline-flex items-center text-secondary-900 hover:text-primary-900 mb-4"
     >
       <ArrowLeft className="mr-2" size={20} />
       Back to Calendar
