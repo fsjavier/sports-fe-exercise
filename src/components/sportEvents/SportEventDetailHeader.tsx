@@ -14,7 +14,7 @@ export default function SportEventDetailHeader({
   return (
     <>
       <GoBackToCalendar />
-      <div className="bg-blue-500 text-white p-4 rounded-t-lg">
+      <div className="bg-secondary-900 text-white p-4 rounded-t-lg">
         <h2 className="text-2xl font-bold mb-2">
           {homeTeam} vs {awayTeam}
         </h2>

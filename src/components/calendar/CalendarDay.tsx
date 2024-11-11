@@ -23,15 +23,15 @@ export default function CalendarDay({
       onClick={onClick}
       className={`
         aspect-square p-2 border-b relative
-        ${!isCurrentMonth && "text-gray-400"}
-        ${isSelected && "bg-blue-200 rounded-md"}
+        ${!isCurrentMonth && "text-muted-100"}
+        ${isSelected && "bg-primary-100 rounded-md"}
         ${isToday && "font-bold"}
-        hover:bg-gray-100 cursor-pointer transition-colors duration-200`}
+        hover:bg-primary-50 cursor-pointer transition-colors duration-200`}
     >
       <div className="p-1 text-sm text-center">{dateCalendar}</div>
       {eventCount > 0 && (
         <div className="absolute bottom-2 left-1 right-1">
-          <div className="bg-blue-500 h-1 w-full rounded-full sm:h-auto text-white text-xs text-center">
+          <div className="bg-primary-500 h-1 w-full rounded-full sm:h-auto text-white text-xs text-center">
             <span className="hidden sm:inline w-full">
               {eventCount} event{eventCount > 1 ? "s" : ""}
             </span>

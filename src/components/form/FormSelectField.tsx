@@ -28,7 +28,7 @@ export default function FormSelectField({
 }: FormSelectFieldProps) {
   return (
     <div>
-      <label htmlFor={id} className="block text-sm font-medium text-gray-700">
+      <label htmlFor={id} className="block text-sm font-medium text-muted-900">
         {label}
       </label>
       <select
@@ -37,7 +37,7 @@ export default function FormSelectField({
         value={value}
         onChange={onChange}
         required={required}
-        className={`mt-1 p-1 w-full rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+        className={`mt-1 p-1 w-full rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-secondary-500`}
       >
         <option value="" disabled>
           Select {label}

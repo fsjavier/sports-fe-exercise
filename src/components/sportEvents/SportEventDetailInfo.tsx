@@ -26,22 +26,22 @@ export default function SportEventDetailInfo({
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <EventDetailIconElement
-        icon={<Calendar className="mr-2 text-gray-500" size={20} />}
+        icon={<Calendar className="mr-2 text-muted-500" size={20} />}
         label="Date"
         value={formattedDate}
       />
       <EventDetailIconElement
-        icon={<Clock className="mr-2 text-gray-500" size={20} />}
+        icon={<Clock className="mr-2 text-muted-500" size={20} />}
         label="Time"
         value={validatedTime}
       />
       <EventDetailIconElement
-        icon={<Trophy className="mr-2 text-gray-500" size={20} />}
+        icon={<Trophy className="mr-2 text-muted-500" size={20} />}
         label="Stage"
         value={validatedStage}
       />
       <EventDetailIconElement
-        icon={<MapPin className="mr-2 text-gray-500" size={20} />}
+        icon={<MapPin className="mr-2 text-muted-500" size={20} />}
         label="Stadium"
         value={validatedStadium}
       />

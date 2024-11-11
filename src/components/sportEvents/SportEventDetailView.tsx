@@ -21,7 +21,7 @@ export default function SportEventDetailView({
         awayTeam={event.awayTeam?.name}
         competitionName={event.originCompetitionName}
       />
-      <div className="bg-white shadow-lg rounded-b-lg overflow-hidden">
+      <div className="shadow-lg rounded-b-lg overflow-hidden">
         <div className="p-6">
           <SportEventDetailInfo
             date={event.dateVenue}
@@ -37,7 +37,7 @@ export default function SportEventDetailView({
             <SportEventDetailResult result={event.result} />
           )}
           <div className="mt-6">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-muted-500">
               <span className="font-semibold">Status:</span> {validatedStatus}
             </p>
           </div>

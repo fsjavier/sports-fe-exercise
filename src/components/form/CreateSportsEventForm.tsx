@@ -176,7 +176,7 @@ export default function CreateSportsEventForm() {
         <button
           type="submit"
           disabled={!isFormComplete() || isPending}
-          className="w-full py-2 px-4 border rounded-md text-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-offset-1 focus:ring-1 focus:ring-indigo-500 disabled:bg-indigo-300 disabled:cursor-not-allowed"
+          className="w-full font-bold py-2 px-4 border rounded-md text-sm text-white bg-secondary-500 hover:bg-secondary-600 focus:ring-offset-1 focus:ring-1 focus:ring-secondary-500 disabled:bg-secondary-100 disabled:cursor-not-allowed"
         >
           {isPending ? "Adding..." : "Add Event"}
         </button>

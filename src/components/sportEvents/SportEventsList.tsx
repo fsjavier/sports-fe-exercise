@@ -8,7 +8,7 @@ export default function SportEventsList() {
   const sportEvents = getEventsForDate(selectedDate);
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-4">
+    <div className=" shadow-md rounded-lg p-4">
       <h3 className="text-xl font-bold mb-4">
         {formatDate(selectedDate, "MMMM d, yyyy")}
       </h3>

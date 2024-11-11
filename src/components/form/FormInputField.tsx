@@ -31,7 +31,7 @@ export default function FormInputField({
 }: FormInputProps) {
   return (
     <div>
-      <label htmlFor={id} className="block text-sm font-medium text-gray-700">
+      <label htmlFor={id} className="block text-sm font-medium text-muted-900">
         {label}
       </label>
       <input
@@ -42,7 +42,7 @@ export default function FormInputField({
         onChange={onChange}
         required={required}
         placeholder={placeholder}
-        className={`mt-1 p-1 w-full rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500`}
+        className={`mt-1 p-1 w-full rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-secondary-500`}
         minLength={minLength}
         maxLength={maxLength}
         min={min}

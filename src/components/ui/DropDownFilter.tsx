@@ -19,7 +19,10 @@ export default function DropDownFilter({
 
   return (
     <div className="mb-4 flex flex-col w-full justify-center items-center">
-      <label htmlFor={label} className="text-sm font-medium text-gray-700 mb-1">
+      <label
+        htmlFor={label}
+        className="text-sm font-medium text-muted-900 mb-1"
+      >
         {label}
       </label>
       <select

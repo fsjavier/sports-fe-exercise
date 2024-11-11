@@ -25,14 +25,14 @@ export default function CalendarHeader() {
       <div className="flex justify-between items-center mb-4">
         <button
           onClick={handlePreviousMonth}
-          className="p-2 hover:bg-gray-200 rounded"
+          className="p-2 hover:bg-primary-50 rounded"
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
         <h2 className="text-2xl font-bold">{getMonthYear(currentDate)}</h2>
         <button
           onClick={handleNextMonth}
-          className="p-2 hover:bg-gray-200 rounded"
+          className="p-2 hover:bg-primary-50 rounded"
         >
           <ChevronRight className="h-6 w-6" />
         </button>

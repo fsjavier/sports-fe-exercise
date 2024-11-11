@@ -30,12 +30,12 @@ export default function SportEventDetailTeamInfo({
       <h3 className="text-xl font-semibold mb-2">Teams</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <EventDetailIconElement
-          icon={<Flag className="mr-2 text-gray-500" size={20} />}
+          icon={<Flag className="mr-2 text-muted-500" size={20} />}
           label="Home"
           value={`${validatedHomeTeamName} (${validatedHomeTeamCountryCode})`}
         />
         <EventDetailIconElement
-          icon={<Flag className="mr-2 text-gray-500" size={20} />}
+          icon={<Flag className="mr-2 text-muted-500" size={20} />}
           label="Away"
           value={`${validatedAwayTeamName} (${validatedAwayTeamCountryCode})`}
         />

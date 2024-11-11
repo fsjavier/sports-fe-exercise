@@ -18,14 +18,14 @@ export default function SportEventSummary({
     <li className="border-b pb-2">
       <Link
         to={`/event/${sportEvent.id}`}
-        className="block hover:bg-gray-100 p-2 rounded"
+        className="block hover:bg-primary-50 p-2 rounded"
       >
         <div className="font-semibold">
           {validatedHomeTeamName} vs {validatedAwayTeamName}
         </div>
-        <div className="text-sm text-gray-600">{validatedTime}</div>
-        <div className="text-sm text-gray-600">{validatedCompetitionName}</div>
-        <div className="text-sm text-gray-600">{validatedStatus}</div>
+        <div className="text-sm text-muted-500">{validatedTime}</div>
+        <div className="text-sm text-muted-500">{validatedCompetitionName}</div>
+        <div className="text-sm text-muted-500">{validatedStatus}</div>
       </Link>
     </li>
   );
