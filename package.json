@@ -8,8 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "clean-json": "node src/utils/removeTrailingCommas.js",
-    "server": "npm run clean-json && json-server db.json",
+    "server": "json-server sportData.json",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:coverage": "vitest run --coverage"
