@@ -13,10 +13,10 @@ export default function SportEventSummary({
   sportEvent,
 }: SportEventSummaryProps) {
   const validatedHomeTeamName = capitalizeFirstLetterOfEachWord(
-    sportEvent.homeTeam.name
+    sportEvent.homeTeam?.name
   );
   const validatedAwayTeamName = capitalizeFirstLetterOfEachWord(
-    sportEvent.awayTeam.name
+    sportEvent.awayTeam?.name
   );
   const validatedSport = capitalizeFirstLetter(sportEvent.sport);
   const validatedCompetitionName = capitalizeFirstLetterOfEachWord(
