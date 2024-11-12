@@ -11,7 +11,7 @@ This is a React application that displays a list of sports events in a calendar 
 
 ### Option 1: Using npm
 
--Run the server (this will start the json-server)
+- Run the server (this will start the json-server)
 
 ```
 npm run server
@@ -72,4 +72,12 @@ npm run test
 
 ## Future Improvements
 
-- Add functionality to update and delete events.
+- Implement full CRUD functionality for events.
+- Add more filtering options in the Calendar and group events to improve user experience.
+- Add sorting options to allow users to order events.
+- Improve the calendar interface for better navigation to different months and years and to go to current date.
+- Persist last date selected by the user for better experience when navigating away and back to the calendar.
+- Expand the event creation form to include additional fields.
+- Improve form validation with real-time feedback.
+- Implement an authentication system to allow users to create personal accounts.
+- Optimize data fetching to handle larger datasets efficiently.
