@@ -12,7 +12,7 @@ export interface SportEvent {
   group?: string | null;
   originCompetitionId: string;
   originCompetitionName: string;
-  id: string;
+  id?: string;
 }
 
 export enum EventSport {

@@ -58,7 +58,6 @@ export default function CreateSportsEventForm() {
         homeGoals: parseInt(formData.homeTeamScore),
         awayGoals: parseInt(formData.awayTeamScore),
       },
-      id: new Date().toISOString(),
       originCompetitionId: formData.originCompetitionName
         .toLowerCase()
         .replace(" ", "-"),
